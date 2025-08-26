@@ -5,37 +5,38 @@ html
     title= title
     link(rel="stylesheet", href="/css/style.css")
   body
-    h1= Update Custom Object Form | Integrating With HubSpot I Practicum
+    h1= title
 
     // ✅ Show CREATE form if title contains "Create"
     if title && title.indexOf('Create') !== -1
-      form(action="/create-cobj", method="post")
-        each prop in properties
-          div
-            label(for=prop)= prop
-            input(
-              type="text"
-              name=prop
-              id=prop
-              required=(prop === 'name')
-            )
-        button(type="submit") Save
-        p
-          a(href="/") Return to the homepage
+      .form-wrapper
+        form(action="/create-cobj", method="post")
+          each prop in properties
+            div
+              label(for=prop)= prop
+              input(
+                type="text"
+                name=prop
+                id=prop
+                required=(prop === 'name')
+              )
+          button(type="submit") Save
+          p
+            a(href="/") Return to the homepage
 
     // ✅ Show UPDATE form if title contains "Update"
     if title && title.indexOf('Update') !== -1
-      form(action="/update-cobj", method="post")
-        each prop in properties
-          div
-            label(for=prop)= prop
-            input(
-              type="text"
-              name=prop
-              id=prop
-              required=(prop === 'name')
-            )
-        button(type="submit") Save
-        p
-          a(href="/") Return to the homepage
-
+      .form-wrapper
+        form(action="/update-cobj", method="post")
+          each prop in properties
+            div
+              label(for=prop)= prop
+              input(
+                type="text"
+                name=prop
+                id=prop
+                required=(prop === 'name')
+              )
+          button(type="submit") Save
+          p
+            a(href="/") Return to the homepage
