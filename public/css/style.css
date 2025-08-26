@@ -1,58 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+/* Center everything */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
 }
 
-h1 {
-    margin: 1rem;
+/* Container for content */
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
 }
 
-.card__email {
-    font-size: 1rem;
+th {
+  background-color: #4CAF50;
+  color: white;
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+td {
+  text-align: center;
 }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+/* Form input styling */
+input[type="text"], input[type="email"], input[type="number"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-input[type="text"] {
-    padding: .25rem;
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+/* Buttons styling */
+.buttons, form button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button, form button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.button:hover, form button:hover {
+  background-color: #45a049;
+}
+
+/* Horizontal rule spacing */
+hr {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
